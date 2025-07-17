@@ -1,0 +1,11 @@
+﻿CREATE TABLE "TaskItems"
+(
+"Id" BIGSERIAL PRIMARY KEY,
+"Title" VARCHAR(255) NOT NULL,
+"Description" VARCHAR(255),
+"DueDate" TIMESTAMPTZ NOT NULL,
+"IsCompleted" BOOLEAN Not Null,
+"UserId" BIGINT NOT NULL,
+"CreatedDateTime" TIMESTAMPTZ NOT NULL,
+FOREIGN KEY ("UserId") REFERENCES "User"("Id")
+);
